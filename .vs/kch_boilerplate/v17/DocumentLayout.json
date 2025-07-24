@@ -1,0 +1,446 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\clients\\KCH\\code\\backend\\kch_backend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\infrastructure\\services\\vendorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:infrastructure\\services\\vendorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\infrastructure\\services\\vendorpaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:infrastructure\\services\\vendorpaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\infrastructure\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:infrastructure\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\infrastructure\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:infrastructure\\services\\eventservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\infrastructure\\services\\decorationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:infrastructure\\services\\decorationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\infrastructure\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:infrastructure\\services\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\infrastructure\\services\\cateringservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:infrastructure\\services\\cateringservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\infrastructure\\services\\branchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:infrastructure\\services\\branchservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\infrastructure\\services\\billingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:infrastructure\\services\\billingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\infrastructure\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:infrastructure\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\downloads\\customers_module.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\api\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:api\\controllers\\reportscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\application\\interfaces\\ireportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:application\\interfaces\\ireportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\application\\dtos\\reports\\monthlypaymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:application\\dtos\\reports\\monthlypaymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\application\\dtos\\reports\\paymentsummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:application\\dtos\\reports\\paymentsummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\application\\dtos\\reports\\vendorpaymentreportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:application\\dtos\\reports\\vendorpaymentreportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\application\\dtos\\reports\\stockrequirementdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:application\\dtos\\reports\\stockrequirementdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\application\\dtos\\reports\\customerbillingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:application\\dtos\\reports\\customerbillingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\application\\dtos\\reports\\eventsummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:application\\dtos\\reports\\eventsummarydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\api\\controllers\\vendorpaymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:api\\controllers\\vendorpaymentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\application\\interfaces\\ivendorpaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:application\\interfaces\\ivendorpaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\application\\dtos\\vendor\\vendorpaymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:application\\dtos\\vendor\\vendorpaymentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\api\\controllers\\vendorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:api\\controllers\\vendorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\application\\interfaces\\ivendorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:application\\interfaces\\ivendorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\application\\dtos\\vendor\\vendordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:application\\dtos\\vendor\\vendordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\application\\dtos\\vendor\\vendorcategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:application\\dtos\\vendor\\vendorcategorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EventService.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\EventService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\EventService.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\EventService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\EventService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHoAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T05:58:51.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DecorationService.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\DecorationService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\DecorationService.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\DecorationService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\DecorationService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T05:58:34.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CustomerService.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\CustomerService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\CustomerService.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\CustomerService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\CustomerService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T05:58:16.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CateringService.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\CateringService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\CateringService.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\CateringService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\CateringService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T05:57:57.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ReportService.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\ReportService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\ReportService.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\ReportService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\ReportService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T12:44:33.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "VendorPaymentService.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\VendorPaymentService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\VendorPaymentService.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\VendorPaymentService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\VendorPaymentService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T11:03:01.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VendorService.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\VendorService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\VendorService.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\VendorService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\VendorService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T10:43:41.406Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BranchService.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\BranchService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\BranchService.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\BranchService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\BranchService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T05:52:25.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BillingService.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\BillingService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\BillingService.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\BillingService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\BillingService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T05:51:17.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\AuthService.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\AuthService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\AuthService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-24T05:49:37.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "customers_module.json",
+              "DocumentMoniker": "E:\\downloads\\customers_module.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\downloads\\customers_module.json",
+              "ToolTip": "E:\\downloads\\customers_module.json",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\downloads\\customers_module.json",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-23T15:44:32.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ReportsController.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\API\\Controllers\\ReportsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\ReportsController.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\API\\Controllers\\ReportsController.cs",
+              "RelativeToolTip": "API\\Controllers\\ReportsController.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAiwEIAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T12:50:52.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IReportService.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\Interfaces\\IReportService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IReportService.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\Interfaces\\IReportService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IReportService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T12:44:05.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MonthlyPaymentDto.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\DTOs\\Reports\\MonthlyPaymentDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Reports\\MonthlyPaymentDto.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\DTOs\\Reports\\MonthlyPaymentDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\Reports\\MonthlyPaymentDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T12:43:34.598Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PaymentSummaryDto.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\DTOs\\Reports\\PaymentSummaryDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Reports\\PaymentSummaryDto.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\DTOs\\Reports\\PaymentSummaryDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\Reports\\PaymentSummaryDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T12:43:17.779Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "VendorPaymentReportDto.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\DTOs\\Reports\\VendorPaymentReportDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Reports\\VendorPaymentReportDto.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\DTOs\\Reports\\VendorPaymentReportDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\Reports\\VendorPaymentReportDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T12:42:59.837Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "StockRequirementDto.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\DTOs\\Reports\\StockRequirementDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Reports\\StockRequirementDto.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\DTOs\\Reports\\StockRequirementDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\Reports\\StockRequirementDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T12:42:38.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CustomerBillingDto.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\DTOs\\Reports\\CustomerBillingDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Reports\\CustomerBillingDto.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\DTOs\\Reports\\CustomerBillingDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\Reports\\CustomerBillingDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T12:42:17.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "EventSummaryDto.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\DTOs\\Reports\\EventSummaryDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Reports\\EventSummaryDto.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\DTOs\\Reports\\EventSummaryDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\Reports\\EventSummaryDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T12:41:59.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "VendorPaymentsController.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\API\\Controllers\\VendorPaymentsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\VendorPaymentsController.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\API\\Controllers\\VendorPaymentsController.cs",
+              "RelativeToolTip": "API\\Controllers\\VendorPaymentsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T11:04:56.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "IVendorPaymentService.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\Interfaces\\IVendorPaymentService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IVendorPaymentService.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\Interfaces\\IVendorPaymentService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IVendorPaymentService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T10:56:04.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "VendorPaymentDto.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\DTOs\\Vendor\\VendorPaymentDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Vendor\\VendorPaymentDto.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\DTOs\\Vendor\\VendorPaymentDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\Vendor\\VendorPaymentDto.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAzwAkAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T10:55:44.945Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "VendorsController.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\API\\Controllers\\VendorsController.cs",
+              "RelativeDocumentMoniker": "API\\Controllers\\VendorsController.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\API\\Controllers\\VendorsController.cs",
+              "RelativeToolTip": "API\\Controllers\\VendorsController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAiwDEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T10:44:06.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IVendorService.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\Interfaces\\IVendorService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IVendorService.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\Interfaces\\IVendorService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IVendorService.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAA3wAoAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T10:43:20.831Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "VendorDto.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\DTOs\\Vendor\\VendorDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Vendor\\VendorDto.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\DTOs\\Vendor\\VendorDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\Vendor\\VendorDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T10:42:59.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "VendorCategoryDto.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\DTOs\\Vendor\\VendorCategoryDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Vendor\\VendorCategoryDto.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Application\\DTOs\\Vendor\\VendorCategoryDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\Vendor\\VendorCategoryDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-23T10:42:40.11Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
