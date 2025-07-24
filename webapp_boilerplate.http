@@ -1,6 +1,0 @@
-@webapp_boilerplate_HostAddress = http://localhost:5047
-
-GET {{webapp_boilerplate_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

@@ -1,6 +1,6 @@
-﻿using webapp_boilerplate.Application.DTOs.Auth;
+﻿using kch_backend.Application.DTOs.Auth;
 
-namespace webapp_boilerplate.Application.Interfaces
+namespace kch_backend.Application.Interfaces
 {
     public interface IAuthService
     {

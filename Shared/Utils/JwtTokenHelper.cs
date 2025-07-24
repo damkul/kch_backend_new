@@ -4,7 +4,7 @@ using System.Text;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Extensions.Configuration;
 
-namespace webapp_boilerplate.Shared.Utils
+namespace kch_backend.Shared.Utils
 {
     public static class JwtTokenHelper
     {

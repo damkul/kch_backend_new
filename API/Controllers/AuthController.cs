@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using webapp_boilerplate.Infrastructure.Services;
+using kch_backend.Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
-using webapp_boilerplate.Application.DTOs.Auth;
-using webapp_boilerplate.Application.Interfaces;
+using kch_backend.Application.DTOs.Auth;
+using kch_backend.Application.Interfaces;
 
-namespace webapp_boilerplate.API.Controllers
+namespace kch_backend.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

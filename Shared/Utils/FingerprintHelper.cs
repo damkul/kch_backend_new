@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
 
-namespace webapp_boilerplate.Shared.Utils
+namespace kch_backend.Shared.Utils
 {
     public static class FingerprintHelper
     {

@@ -1,4 +1,4 @@
-﻿namespace webapp_boilerplate.Application.DTOs.Auth
+﻿namespace kch_backend.Application.DTOs.Auth
 {
     public class RefreshTokenRequest
     {

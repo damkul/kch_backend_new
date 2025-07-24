@@ -1,6 +1,6 @@
-﻿using webapp_boilerplate.Shared.Utils;
+﻿using kch_backend.Shared.Utils;
 
-namespace webapp_boilerplate.Shared.Middleware
+namespace kch_backend.Shared.Middleware
 {
     public class FingerprintValidationMiddleware
     {
