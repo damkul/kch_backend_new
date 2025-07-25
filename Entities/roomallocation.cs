@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kch_backend.Entities;
 
-[Table("roomallocation")]
+[Table("roomallocations")]
 public partial class RoomAllocation
 {
     public int Id { get; set; }

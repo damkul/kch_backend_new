@@ -3,6 +3,7 @@ using kch_backend.Application.Interfaces;
 using kch_backend.Data;
 using kch_backend.Entities;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 namespace kch_backend.Infrastructure.Services
 {
@@ -17,8 +18,41 @@ namespace kch_backend.Infrastructure.Services
 
         public async Task<List<BranchDto>> GetAllAsync()
         {
-            return await _context.Branches
-                .Select(b => new BranchDto
+            try
+            {
+                Log.Information("Fetching all branches");
+                return await _context.Branches
+                    .Select(b => new BranchDto
+                    {
+                        Id = b.Id,
+                        Name = b.Name,
+                        Location = b.Location,
+                        Contact = b.Contact,
+                        ManagerName = b.ManagerName,
+                        CreatedOn = (DateTime)b.CreatedOn
+                    })
+                    .ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error occurred while fetching branches");
+                throw;
+            }
+        }
+
+        public async Task<BranchDto?> GetByIdAsync(int id)
+        {
+            try
+            {
+                Log.Information("Fetching branch with ID {Id}", id);
+                var b = await _context.Branches.FindAsync(id);
+                if (b == null)
+                {
+                    Log.Warning("Branch not found with ID {Id}", id);
+                    return null;
+                }
+
+                return new BranchDto
                 {
                     Id = b.Id,
                     Name = b.Name,
@@ -26,68 +60,100 @@ namespace kch_backend.Infrastructure.Services
                     Contact = b.Contact,
                     ManagerName = b.ManagerName,
                     CreatedOn = (DateTime)b.CreatedOn
-                })
-                .ToListAsync();
-        }
-
-        public async Task<BranchDto?> GetByIdAsync(int id)
-        {
-            var b = await _context.Branches.FindAsync(id);
-            if (b == null) return null;
-
-            return new BranchDto
+                };
+            }
+            catch (Exception ex)
             {
-                Id = b.Id,
-                Name = b.Name,
-                Location = b.Location,
-                Contact = b.Contact,
-                ManagerName = b.ManagerName,
-                CreatedOn = (DateTime)b.CreatedOn
-            };
+                Log.Error(ex, "Error occurred while fetching branch with ID {Id}", id);
+                throw;
+            }
         }
 
         public async Task<BranchDto> AddAsync(BranchDto dto)
         {
-            var branch = new Branch
+            try
             {
-                
-                Name = dto.Name,
-                Location = dto.Location,
-                Contact = dto.Contact,
-                ManagerName = dto.ManagerName,
-                CreatedOn = DateTime.UtcNow
-            };
-            _context.Branches.Add(branch);
-            await _context.SaveChangesAsync();
+                Log.Information("Adding new branch: {Name}", dto.Name);
 
-           // dto.Id = branch.Id;
-            dto.CreatedOn = DateTime.Now;
-            return dto;
+                var branch = new Branch
+                {
+                    Name = dto.Name,
+                    Location = dto.Location,
+                    Contact = dto.Contact,
+                    ManagerName = dto.ManagerName,
+                    CreatedOn = DateTime.UtcNow
+                };
+
+                _context.Branches.Add(branch);
+                await _context.SaveChangesAsync();
+
+                dto.Id = branch.Id;
+                dto.CreatedOn = branch.CreatedOn ?? DateTime.UtcNow;
+
+                Log.Information("Branch added successfully with ID {Id}", branch.Id);
+                return dto;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error occurred while adding a new branch");
+                throw;
+            }
         }
 
         public async Task<BranchDto?> UpdateAsync(int id, BranchDto dto)
         {
-            var branch = await _context.Branches.FindAsync(id);
-            if (branch == null) return null;
+            try
+            {
+                Log.Information("Updating branch with ID {Id}", id);
 
-            branch.Name = dto.Name;
-            branch.Location = dto.Location;
-            branch.Contact = dto.Contact;
-            branch.ManagerName = dto.ManagerName;
+                var branch = await _context.Branches.FindAsync(id);
+                if (branch == null)
+                {
+                    Log.Warning("Branch not found with ID {Id} for update", id);
+                    return null;
+                }
 
-            await _context.SaveChangesAsync();
-            return dto;
+                branch.Name = dto.Name;
+                branch.Location = dto.Location;
+                branch.Contact = dto.Contact;
+                branch.ManagerName = dto.ManagerName;
+
+                await _context.SaveChangesAsync();
+
+                Log.Information("Branch updated successfully with ID {Id}", id);
+                return dto;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error occurred while updating branch with ID {Id}", id);
+                throw;
+            }
         }
 
         public async Task<bool> DeleteAsync(int id)
         {
-            var branch = await _context.Branches.FindAsync(id);
-            if (branch == null) return false;
+            try
+            {
+                Log.Information("Deleting branch with ID {Id}", id);
 
-            _context.Branches.Remove(branch);
-            await _context.SaveChangesAsync();
-            return true;
+                var branch = await _context.Branches.FindAsync(id);
+                if (branch == null)
+                {
+                    Log.Warning("Branch not found with ID {Id} for deletion", id);
+                    return false;
+                }
+
+                _context.Branches.Remove(branch);
+                await _context.SaveChangesAsync();
+
+                Log.Information("Branch deleted with ID {Id}", id);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error occurred while deleting branch with ID {Id}", id);
+                throw;
+            }
         }
-        
     }
 }

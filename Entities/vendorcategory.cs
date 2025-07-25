@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kch_backend.Entities;
 
-[Table("VendorCategory")]
+[Table("VendorCategories")]
 public partial class VendorCategory
 {
     public int Id { get; set; }

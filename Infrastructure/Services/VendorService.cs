@@ -1,11 +1,15 @@
 ﻿using kch_backend.Application.DTOs.Vendor;
 using kch_backend.Application.Interfaces;
+using kch_backend.Data;
+using kch_backend.Entities;
+using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 namespace kch_backend.Infrastructure.Services
 {
     public class VendorService : IVendorService
     {
-        /*private readonly KchDbContext _context;
+        private readonly KchDbContext _context;
 
         public VendorService(KchDbContext context)
         {
@@ -14,15 +18,68 @@ namespace kch_backend.Infrastructure.Services
 
         public async Task<List<VendorCategoryDto>> GetCategoriesAsync()
         {
-            return await _context.VendorCategories
-                .Select(c => new VendorCategoryDto { Id = c.Id, Name = c.Name })
-                .ToListAsync();
+            try
+            {
+                Log.Information("Fetching all vendor categories");
+
+                var result = await _context.Vendorcategories
+                    .Select(c => new VendorCategoryDto { Id = c.Id, Name = c.Name })
+                    .ToListAsync();
+
+                Log.Information("Fetched {Count} vendor categories", result.Count);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error fetching vendor categories");
+                throw;
+            }
         }
 
         public async Task<List<VendorDto>> GetAllVendorsAsync()
         {
-            return await _context.Vendors
-                .Select(v => new VendorDto
+            try
+            {
+                Log.Information("Fetching all vendors");
+
+                var result = await _context.Vendors
+                    .Select(v => new VendorDto
+                    {
+                        Id = v.Id,
+                        Name = v.Name,
+                        CategoryId = v.CategoryId,
+                        ContactPerson = v.ContactPerson,
+                        Phone = v.Phone,
+                        Email = v.Email,
+                        Address = v.Address,
+                        GstNumber = v.GstNumber
+                    })
+                    .ToListAsync();
+
+                Log.Information("Fetched {Count} vendors", result.Count);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error fetching all vendors");
+                throw;
+            }
+        }
+
+        public async Task<VendorDto?> GetVendorByIdAsync(int id)
+        {
+            try
+            {
+                Log.Information("Fetching vendor with ID: {Id}", id);
+
+                var v = await _context.Vendors.FindAsync(id);
+                if (v == null)
+                {
+                    Log.Warning("Vendor not found with ID: {Id}", id);
+                    return null;
+                }
+
+                return new VendorDto
                 {
                     Id = v.Id,
                     Name = v.Name,
@@ -32,83 +89,80 @@ namespace kch_backend.Infrastructure.Services
                     Email = v.Email,
                     Address = v.Address,
                     GstNumber = v.GstNumber
-                })
-                .ToListAsync();
-        }
-
-        public async Task<VendorDto?> GetVendorByIdAsync(int id)
-        {
-            var v = await _context.Vendors.FindAsync(id);
-            if (v == null) return null;
-
-            return new VendorDto
+                };
+            }
+            catch (Exception ex)
             {
-                Id = v.Id,
-                Name = v.Name,
-                CategoryId = v.CategoryId,
-                ContactPerson = v.ContactPerson,
-                Phone = v.Phone,
-                Email = v.Email,
-                Address = v.Address,
-                GstNumber = v.GstNumber
-            };
+                Log.Error(ex, "Error fetching vendor with ID: {Id}", id);
+                throw;
+            }
         }
 
         public async Task<bool> AddOrUpdateVendorAsync(VendorDto dto)
         {
-            Vendor? vendor = dto.Id == 0
-                ? new Vendor()
-                : await _context.Vendors.FindAsync(dto.Id);
+            try
+            {
+                Log.Information("Saving vendor: {@Dto}", dto);
 
-            if (vendor == null) return false;
+                Vendor? vendor = dto.Id == 0
+                    ? new Vendor()
+                    : await _context.Vendors.FindAsync(dto.Id);
 
-            vendor.Name = dto.Name;
-            vendor.CategoryId = dto.CategoryId;
-            vendor.ContactPerson = dto.ContactPerson;
-            vendor.Phone = dto.Phone;
-            vendor.Email = dto.Email;
-            vendor.Address = dto.Address;
-            vendor.GstNumber = dto.GstNumber;
+                if (vendor == null)
+                {
+                    Log.Warning("Vendor not found with ID: {Id} for update", dto.Id);
+                    return false;
+                }
 
-            if (dto.Id == 0)
-                _context.Vendors.Add(vendor);
+                vendor.Name = dto.Name;
+                vendor.CategoryId = dto.CategoryId;
+                vendor.ContactPerson = dto.ContactPerson;
+                vendor.Phone = dto.Phone;
+                vendor.Email = dto.Email;
+                vendor.Address = dto.Address;
+                vendor.GstNumber = dto.GstNumber;
 
-            await _context.SaveChangesAsync();
-            return true;
+                if (dto.Id == 0)
+                {
+                    _context.Vendors.Add(vendor);
+                    Log.Information("New vendor added: {Name}", dto.Name);
+                }
+
+                await _context.SaveChangesAsync();
+                Log.Information("Vendor saved successfully with ID: {Id}", vendor.Id);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error saving vendor: {@Dto}", dto);
+                throw;
+            }
         }
 
         public async Task<bool> DeleteVendorAsync(int id)
         {
-            var vendor = await _context.Vendors.FindAsync(id);
-            if (vendor == null) return false;
+            try
+            {
+                Log.Information("Deleting vendor with ID: {Id}", id);
 
-            _context.Vendors.Remove(vendor);
-            await _context.SaveChangesAsync();
-            return true;
-        }*/
-        public Task<bool> AddOrUpdateVendorAsync(VendorDto dto)
-        {
-            throw new NotImplementedException();
-        }
+                var vendor = await _context.Vendors.FindAsync(id);
+                if (vendor == null)
+                {
+                    Log.Warning("Vendor not found with ID: {Id}", id);
+                    return false;
+                }
 
-        public Task<bool> DeleteVendorAsync(int id)
-        {
-            throw new NotImplementedException();
-        }
+                _context.Vendors.Remove(vendor);
+                await _context.SaveChangesAsync();
 
-        public Task<List<VendorDto>> GetAllVendorsAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<List<VendorCategoryDto>> GetCategoriesAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<VendorDto?> GetVendorByIdAsync(int id)
-        {
-            throw new NotImplementedException();
+                Log.Information("Vendor deleted with ID: {Id}", id);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error deleting vendor with ID: {Id}", id);
+                throw;
+            }
         }
     }
 }

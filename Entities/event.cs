@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kch_backend.Entities;
 
-[Table("event")]
+[Table("events")]
 public partial class Event
 {
     public int Id { get; set; }

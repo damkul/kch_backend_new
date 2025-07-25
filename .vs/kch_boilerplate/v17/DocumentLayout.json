@@ -3,40 +3,68 @@
   "WorkspaceRootPath": "E:\\clients\\KCH\\code\\backend\\kch_backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\infrastructure\\services\\cateringservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:infrastructure\\services\\cateringservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\vendorpayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\vendorpayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\data\\kchdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:data\\kchdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\infrastructure\\services\\billingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:infrastructure\\services\\billingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\recipecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\recipecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\vendorcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\vendorcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\vendor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\vendor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\vendorpayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\vendorpayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\stockusage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\stockusage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\stockitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\stockitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\roomallocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\roomallocation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\recipeingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\recipeingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\recipecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\recipecategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\recipe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\menuitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\invoiceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\invoiceitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\invoice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\ingredient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\facility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\facility.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\eventvendor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -61,6 +89,38 @@
     {
       "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\eventcatering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\eventcatering.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\decoration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\decoration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\branch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\branch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\booking.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\entities\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:entities\\auditlog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|e:\\clients\\kch\\code\\backend\\kch_backend\\infrastructure\\services\\billingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E32995E-6D4E-4197-95AF-F6E2C0590A1A}|kch_backend.csproj|solutionrelative:infrastructure\\services\\billingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -75,196 +135,391 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CateringService.cs",
-              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\CateringService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Services\\CateringService.cs",
-              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\CateringService.cs",
-              "RelativeToolTip": "Infrastructure\\Services\\CateringService.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAnwDcAAAA3AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T06:12:47.446Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "KchDbContext.cs",
-              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Data\\KchDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\KchDbContext.cs",
-              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Data\\KchDbContext.cs",
-              "RelativeToolTip": "Data\\KchDbContext.cs",
-              "ViewState": "AQIAAC8CAAAAAAAAAAASwCwCAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T06:10:06.955Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BillingService.cs",
-              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\BillingService.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Services\\BillingService.cs",
-              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\BillingService.cs",
-              "RelativeToolTip": "Infrastructure\\Services\\BillingService.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAArwCQAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T06:09:44.923Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Event.cs",
-              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\Event.cs",
-              "RelativeDocumentMoniker": "Entities\\Event.cs",
-              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\Event.cs",
-              "RelativeToolTip": "Entities\\Event.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAACkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T06:07:51.7Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "room.cs",
-              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\room.cs",
-              "RelativeDocumentMoniker": "Entities\\room.cs",
-              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\room.cs",
-              "RelativeToolTip": "Entities\\room.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAA2wBMAAABmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T06:06:56.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "recipecategory.cs",
-              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\recipecategory.cs",
-              "RelativeDocumentMoniker": "Entities\\recipecategory.cs",
-              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\recipecategory.cs",
-              "RelativeToolTip": "Entities\\recipecategory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T06:06:37.566Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "recipe.cs",
-              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\recipe.cs",
-              "RelativeDocumentMoniker": "Entities\\recipe.cs",
-              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\recipe.cs",
-              "RelativeToolTip": "Entities\\recipe.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAowBwAAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T06:06:02.293Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "vendor.cs",
-              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\vendor.cs",
-              "RelativeDocumentMoniker": "Entities\\vendor.cs",
-              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\vendor.cs",
-              "RelativeToolTip": "Entities\\vendor.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAA2wBsAAABdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T06:05:44.738Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "vendorpayment.cs",
               "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\vendorpayment.cs",
               "RelativeDocumentMoniker": "Entities\\vendorpayment.cs",
               "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\vendorpayment.cs",
               "RelativeToolTip": "Entities\\vendorpayment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:26:31.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "vendorcategory.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\vendorcategory.cs",
+              "RelativeDocumentMoniker": "Entities\\vendorcategory.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\vendorcategory.cs",
+              "RelativeToolTip": "Entities\\vendorcategory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:26:22.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "vendor.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\vendor.cs",
+              "RelativeDocumentMoniker": "Entities\\vendor.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\vendor.cs",
+              "RelativeToolTip": "Entities\\vendor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:26:14.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "user.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\user.cs",
+              "RelativeDocumentMoniker": "Entities\\user.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\user.cs",
+              "RelativeToolTip": "Entities\\user.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:26:07.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "stockusage.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\stockusage.cs",
+              "RelativeDocumentMoniker": "Entities\\stockusage.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\stockusage.cs",
+              "RelativeToolTip": "Entities\\stockusage.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T06:05:18.885Z",
+              "WhenOpened": "2025-07-25T10:26:02.284Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "eventcatering.cs",
-              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\eventcatering.cs",
-              "RelativeDocumentMoniker": "Entities\\eventcatering.cs",
-              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\eventcatering.cs",
-              "RelativeToolTip": "Entities\\eventcatering.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAZAAAA",
+              "DocumentIndex": 5,
+              "Title": "stockitem.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\stockitem.cs",
+              "RelativeDocumentMoniker": "Entities\\stockitem.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\stockitem.cs",
+              "RelativeToolTip": "Entities\\stockitem.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAYAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T06:01:06.13Z",
+              "WhenOpened": "2025-07-25T10:25:44.682Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "eventcateringstock.cs",
-              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\eventcateringstock.cs",
-              "RelativeDocumentMoniker": "Entities\\eventcateringstock.cs",
-              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\eventcateringstock.cs",
-              "RelativeToolTip": "Entities\\eventcateringstock.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAYwBsAAAAZAAAA",
+              "DocumentIndex": 6,
+              "Title": "roomallocation.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\roomallocation.cs",
+              "RelativeDocumentMoniker": "Entities\\roomallocation.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\roomallocation.cs",
+              "RelativeToolTip": "Entities\\roomallocation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T06:01:05.618Z",
+              "WhenOpened": "2025-07-25T10:25:38.186Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "eventdecoration.cs",
-              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\eventdecoration.cs",
-              "RelativeDocumentMoniker": "Entities\\eventdecoration.cs",
-              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\eventdecoration.cs",
-              "RelativeToolTip": "Entities\\eventdecoration.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBQAAAAAAAAA",
+              "DocumentIndex": 7,
+              "Title": "room.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\room.cs",
+              "RelativeDocumentMoniker": "Entities\\room.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\room.cs",
+              "RelativeToolTip": "Entities\\room.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T06:01:05.054Z",
+              "WhenOpened": "2025-07-25T10:25:26.907Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "eventfacility.cs",
-              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\eventfacility.cs",
-              "RelativeDocumentMoniker": "Entities\\eventfacility.cs",
-              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\eventfacility.cs",
-              "RelativeToolTip": "Entities\\eventfacility.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAbAAAA",
+              "DocumentIndex": 8,
+              "Title": "recipeingredient.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\recipeingredient.cs",
+              "RelativeDocumentMoniker": "Entities\\recipeingredient.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\recipeingredient.cs",
+              "RelativeToolTip": "Entities\\recipeingredient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T06:01:04.372Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "eventmenu.cs",
-              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\eventmenu.cs",
-              "RelativeDocumentMoniker": "Entities\\eventmenu.cs",
-              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\eventmenu.cs",
-              "RelativeToolTip": "Entities\\eventmenu.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T06:01:03.827Z",
+              "WhenOpened": "2025-07-25T10:25:14.77Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "recipecategory.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\recipecategory.cs",
+              "RelativeDocumentMoniker": "Entities\\recipecategory.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\recipecategory.cs",
+              "RelativeToolTip": "Entities\\recipecategory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:25:02.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "recipe.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\recipe.cs",
+              "RelativeDocumentMoniker": "Entities\\recipe.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\recipe.cs",
+              "RelativeToolTip": "Entities\\recipe.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:24:56.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "menuitem.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\menuitem.cs",
+              "RelativeDocumentMoniker": "Entities\\menuitem.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\menuitem.cs",
+              "RelativeToolTip": "Entities\\menuitem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:24:44.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "invoiceitem.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\invoiceitem.cs",
+              "RelativeDocumentMoniker": "Entities\\invoiceitem.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\invoiceitem.cs",
+              "RelativeToolTip": "Entities\\invoiceitem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:24:30.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "invoice.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\invoice.cs",
+              "RelativeDocumentMoniker": "Entities\\invoice.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\invoice.cs",
+              "RelativeToolTip": "Entities\\invoice.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:24:14.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ingredient.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\ingredient.cs",
+              "RelativeDocumentMoniker": "Entities\\ingredient.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\ingredient.cs",
+              "RelativeToolTip": "Entities\\ingredient.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:23:55.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "eventvendor.cs",
               "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\eventvendor.cs",
               "RelativeDocumentMoniker": "Entities\\eventvendor.cs",
               "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\eventvendor.cs",
               "RelativeToolTip": "Entities\\eventvendor.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAxwBoAAABjAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T06:01:03.238Z",
+              "WhenOpened": "2025-07-25T10:23:37.616Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "eventmenu.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\eventmenu.cs",
+              "RelativeDocumentMoniker": "Entities\\eventmenu.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\eventmenu.cs",
+              "RelativeToolTip": "Entities\\eventmenu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:23:29.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "eventdecoration.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\eventdecoration.cs",
+              "RelativeDocumentMoniker": "Entities\\eventdecoration.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\eventdecoration.cs",
+              "RelativeToolTip": "Entities\\eventdecoration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:23:14.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "eventcateringstock.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\eventcateringstock.cs",
+              "RelativeDocumentMoniker": "Entities\\eventcateringstock.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\eventcateringstock.cs",
+              "RelativeToolTip": "Entities\\eventcateringstock.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:23:10.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "eventcatering.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\eventcatering.cs",
+              "RelativeDocumentMoniker": "Entities\\eventcatering.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\eventcatering.cs",
+              "RelativeToolTip": "Entities\\eventcatering.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:23:06.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "decoration.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\decoration.cs",
+              "RelativeDocumentMoniker": "Entities\\decoration.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\decoration.cs",
+              "RelativeToolTip": "Entities\\decoration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:22:52.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "customer.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\customer.cs",
+              "RelativeDocumentMoniker": "Entities\\customer.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\customer.cs",
+              "RelativeToolTip": "Entities\\customer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:22:45.897Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "booking.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\booking.cs",
+              "RelativeDocumentMoniker": "Entities\\booking.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\booking.cs",
+              "RelativeToolTip": "Entities\\booking.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:22:32.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "auditlog.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\auditlog.cs",
+              "RelativeDocumentMoniker": "Entities\\auditlog.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\auditlog.cs",
+              "RelativeToolTip": "Entities\\auditlog.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:21:55.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "branch.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\branch.cs",
+              "RelativeDocumentMoniker": "Entities\\branch.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\branch.cs",
+              "RelativeToolTip": "Entities\\branch.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:21:42.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "bill.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\bill.cs",
+              "RelativeDocumentMoniker": "Entities\\bill.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\bill.cs",
+              "RelativeToolTip": "Entities\\bill.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:20:54.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "facility.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\facility.cs",
+              "RelativeDocumentMoniker": "Entities\\facility.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\facility.cs",
+              "RelativeToolTip": "Entities\\facility.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:19:25.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "eventfacility.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\eventfacility.cs",
+              "RelativeDocumentMoniker": "Entities\\eventfacility.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\eventfacility.cs",
+              "RelativeToolTip": "Entities\\eventfacility.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:18:32.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Event.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\Event.cs",
+              "RelativeDocumentMoniker": "Entities\\Event.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Entities\\Event.cs",
+              "RelativeToolTip": "Entities\\Event.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:17:49.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "BillingService.cs",
+              "DocumentMoniker": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\BillingService.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Services\\BillingService.cs",
+              "ToolTip": "E:\\clients\\KCH\\code\\backend\\kch_backend\\Infrastructure\\Services\\BillingService.cs",
+              "RelativeToolTip": "Infrastructure\\Services\\BillingService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABkAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-25T10:16:54.912Z",
               "EditorCaption": ""
             }
           ]

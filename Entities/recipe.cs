@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace kch_backend.Entities;
 
 
-[Table("recipe")]
+[Table("recipes")]
 public partial class Recipe
 {
     public int Id { get; set; }

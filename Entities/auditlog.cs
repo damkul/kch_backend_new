@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kch_backend.Entities;
 
+[Table("auditlogs")]
 public partial class Auditlog
 {
     public int Id { get; set; }

@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kch_backend.Entities;
 
-[Table("branch")]
+[Table("branches")]
 public partial class Branch
 {
     public int Id { get; set; }
