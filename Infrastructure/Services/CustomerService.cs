@@ -1,7 +1,5 @@
 ﻿using kch_backend.Application.DTOs.Customer;
 using kch_backend.Application.Interfaces;
-using kch_backend.Data;
-using kch_backend.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace kch_backend.Infrastructure.Services

@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kch_backend.Entities;
 
-public partial class user
+[Table("User")]
+public partial class User
 {
     public int Id { get; set; }
 

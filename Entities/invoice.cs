@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kch_backend.Entities;
 
-public partial class invoice
+[Table("invoice")]
+public partial class Invoice
 {
     public int Id { get; set; }
 
@@ -17,7 +19,7 @@ public partial class invoice
 
     public DateTime? GeneratedDate { get; set; }
 
-    public virtual booking? Booking { get; set; }
+    public virtual Booking? Booking { get; set; }
 
-    public virtual ICollection<invoiceitem> invoiceitems { get; set; } = new List<invoiceitem>();
+    public virtual ICollection<InvoiceItem> invoiceitems { get; set; } = new List<InvoiceItem>();
 }

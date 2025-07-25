@@ -1,6 +1,5 @@
 ﻿using kch_backend.Application.DTOs.Decoration;
 using kch_backend.Application.Interfaces;
-using kch_backend.Data;
 
 namespace kch_backend.Infrastructure.Services
 {

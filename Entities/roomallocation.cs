@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kch_backend.Entities;
 
-public partial class roomallocation
+[Table("roomallocation")]
+public partial class RoomAllocation
 {
     public int Id { get; set; }
 
@@ -15,7 +17,7 @@ public partial class roomallocation
 
     public decimal? Charge { get; set; }
 
-    public virtual booking? Booking { get; set; }
+    public virtual Booking? Booking { get; set; }
 
-    public virtual room? Room { get; set; }
+    public virtual Room? Room { get; set; }
 }

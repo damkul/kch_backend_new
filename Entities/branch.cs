@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kch_backend.Entities;
 
-public partial class branch
+[Table("branch")]
+public partial class Branch
 {
     public int Id { get; set; }
 
@@ -17,7 +19,7 @@ public partial class branch
 
     public DateTime? CreatedOn { get; set; }
 
-    public virtual ICollection<customer> customers { get; set; } = new List<customer>();
+    public virtual ICollection<Customer> customers { get; set; } = new List<Customer>();
 
-    public virtual ICollection<Event> Events { get; set; } = new List<Event>();
+    public virtual ICollection<Event> events { get; set; } = new List<Event>();
 }

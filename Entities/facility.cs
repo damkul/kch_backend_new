@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kch_backend.Entities;
 
-public partial class facility
+[Table("facility")]
+public partial class Facility
 {
     public int Id { get; set; }
 
@@ -13,5 +15,5 @@ public partial class facility
 
     public decimal? ExtraCharge { get; set; }
 
-    public virtual ICollection<eventfacility> eventfacilities { get; set; } = new List<eventfacility>();
+    public virtual ICollection<EventFacility> eventfacilities { get; set; } = new List<EventFacility>();
 }

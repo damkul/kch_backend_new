@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kch_backend.Entities;
 
-public partial class eventfacility
+[Table("eventfacility")]
+public partial class EventFacility
 {
     public int Id { get; set; }
 
@@ -19,5 +21,5 @@ public partial class eventfacility
 
     public virtual Event? Event { get; set; }
 
-    public virtual facility? Facility { get; set; }
+    public virtual Facility? Facility { get; set; }
 }

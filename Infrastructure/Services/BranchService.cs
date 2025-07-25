@@ -8,7 +8,7 @@ namespace kch_backend.Infrastructure.Services
 {
     public class BranchService : IBranchService
     {
-        /*private readonly KchDbContext _context;
+        private readonly KchDbContext _context;
 
         public BranchService(KchDbContext context)
         {
@@ -17,7 +17,7 @@ namespace kch_backend.Infrastructure.Services
 
         public async Task<List<BranchDto>> GetAllAsync()
         {
-            return await _context.branches
+            return await _context.Branches
                 .Select(b => new BranchDto
                 {
                     Id = b.Id,
@@ -32,7 +32,7 @@ namespace kch_backend.Infrastructure.Services
 
         public async Task<BranchDto?> GetByIdAsync(int id)
         {
-            var b = await _context.branches.FindAsync(id);
+            var b = await _context.Branches.FindAsync(id);
             if (b == null) return null;
 
             return new BranchDto
@@ -48,25 +48,26 @@ namespace kch_backend.Infrastructure.Services
 
         public async Task<BranchDto> AddAsync(BranchDto dto)
         {
-            var branch = new branch
+            var branch = new Branch
             {
+                
                 Name = dto.Name,
                 Location = dto.Location,
                 Contact = dto.Contact,
                 ManagerName = dto.ManagerName,
                 CreatedOn = DateTime.UtcNow
             };
-            _context.branches.Add(branch);
+            _context.Branches.Add(branch);
             await _context.SaveChangesAsync();
 
-            dto.Id = branch.Id;
-            dto.CreatedOn = (DateTime)branch.CreatedOn;
+           // dto.Id = branch.Id;
+            dto.CreatedOn = DateTime.Now;
             return dto;
         }
 
         public async Task<BranchDto?> UpdateAsync(int id, BranchDto dto)
         {
-            var branch = await _context.branches.FindAsync(id);
+            var branch = await _context.Branches.FindAsync(id);
             if (branch == null) return null;
 
             branch.Name = dto.Name;
@@ -80,36 +81,13 @@ namespace kch_backend.Infrastructure.Services
 
         public async Task<bool> DeleteAsync(int id)
         {
-            var branch = await _context.branches.FindAsync(id);
+            var branch = await _context.Branches.FindAsync(id);
             if (branch == null) return false;
 
-            _context.branches.Remove(branch);
+            _context.Branches.Remove(branch);
             await _context.SaveChangesAsync();
             return true;
-        }*/
-        public Task<BranchDto> AddAsync(BranchDto dto)
-        {
-            throw new NotImplementedException();
         }
-
-        public Task<bool> DeleteAsync(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<List<BranchDto>> GetAllAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<BranchDto?> GetByIdAsync(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<BranchDto?> UpdateAsync(int id, BranchDto dto)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

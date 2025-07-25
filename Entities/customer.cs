@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kch_backend.Entities;
 
-public partial class customer
+[Table("customer")]
+public partial class Customer
 {
     public int Id { get; set; }
 
@@ -21,10 +23,9 @@ public partial class customer
 
     public string? Address { get; set; }
 
-    public virtual branch? Branch { get; set; }
+    public virtual Branch? Branch { get; set; }
 
-    public virtual ICollection<booking> bookings { get; set; } = new List<booking>();
+    public virtual ICollection<Booking> bookings { get; set; } = new List<Booking>();
 
-    public virtual ICollection<Event> Events { get; set; } = new List<Event>();
-
+    public virtual ICollection<Event> events { get; set; } = new List<Event>();
 }

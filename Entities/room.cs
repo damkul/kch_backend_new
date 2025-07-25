@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kch_backend.Entities;
 
-public partial class room
+[Table("room")]
+public partial class Room
 {
     public int Id { get; set; }
 
@@ -13,7 +15,7 @@ public partial class room
 
     public decimal? PricePerDay { get; set; }
 
-    public virtual ICollection<booking> bookings { get; set; } = new List<booking>();
+    public virtual ICollection<Booking> bookings { get; set; } = new List<Booking>();
 
-    public virtual ICollection<roomallocation> roomallocations { get; set; } = new List<roomallocation>();
+    public virtual ICollection<RoomAllocation> roomallocations { get; set; } = new List<RoomAllocation>();
 }

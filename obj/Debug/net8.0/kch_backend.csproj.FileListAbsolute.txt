@@ -111,6 +111,7 @@ E:\clients\KCH\code\backend\kch_backend\obj\Debug\net8.0\kch_backend.AssemblyInf
 E:\clients\KCH\code\backend\kch_backend\obj\Debug\net8.0\kch_backend.csproj.CoreCompileInputs.cache
 E:\clients\KCH\code\backend\kch_backend\obj\Debug\net8.0\kch_backend.MvcApplicationPartsAssemblyInfo.cs
 E:\clients\KCH\code\backend\kch_backend\obj\Debug\net8.0\kch_backend.MvcApplicationPartsAssemblyInfo.cache
+E:\clients\KCH\code\backend\kch_backend\obj\Debug\net8.0\kch_backend.sourcelink.json
 E:\clients\KCH\code\backend\kch_backend\obj\Debug\net8.0\staticwebassets.build.json
 E:\clients\KCH\code\backend\kch_backend\obj\Debug\net8.0\staticwebassets.development.json
 E:\clients\KCH\code\backend\kch_backend\obj\Debug\net8.0\staticwebassets\msbuild.kch_backend.Microsoft.AspNetCore.StaticWebAssets.props

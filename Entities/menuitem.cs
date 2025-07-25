@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kch_backend.Entities;
 
-public partial class menuitem
+
+[Table("menuitem")]
+public partial class MenuItem
 {
     public int Id { get; set; }
 
@@ -13,7 +16,5 @@ public partial class menuitem
 
     public string? Description { get; set; }
 
-    public virtual ICollection<eventmenu> eventmenus { get; set; } = new List<eventmenu>();
-
-    public virtual ICollection<recipe> recipes { get; set; } = new List<recipe>();
+    public virtual ICollection<EventMenu> eventmenus { get; set; } = new List<EventMenu>();
 }

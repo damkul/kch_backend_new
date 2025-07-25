@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kch_backend.Entities;
 
-[Table("event")]  // maps to lowercase table
+[Table("event")]
 public partial class Event
 {
     public int Id { get; set; }
@@ -23,12 +23,19 @@ public partial class Event
 
     public DateTime? CreatedOn { get; set; }
 
-    public virtual branch Branch { get; set; } = null!;
+    public virtual Branch Branch { get; set; } = null!;
 
-    public virtual customer Customer { get; set; } = null!;
+    public virtual Customer Customer { get; set; } = null!;
 
-    public virtual ICollection<eventfacility> eventfacilities { get; set; } = new List<eventfacility>();
+    public virtual ICollection<Bill> bills { get; set; } = new List<Bill>();
 
-    
+    public virtual ICollection<EventCatering> eventcaterings { get; set; } = new List<EventCatering>();
 
+    public virtual ICollection<EventCateringStock> eventcateringstocks { get; set; } = new List<EventCateringStock>();
+
+    public virtual ICollection<EventDecoration> eventdecorations { get; set; } = new List<EventDecoration>();
+
+    public virtual ICollection<EventFacility> eventfacilities { get; set; } = new List<EventFacility>();
+
+    public virtual ICollection<EventVendor> eventvendors { get; set; } = new List<EventVendor>();
 }

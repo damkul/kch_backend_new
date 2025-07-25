@@ -1,7 +1,5 @@
 ﻿using kch_backend.Application.DTOs.Event;
 using kch_backend.Application.Interfaces;
-using kch_backend.Data;
-using kch_backend.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 

@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kch_backend.Entities;
 
-public partial class stockusage
+[Table("stockusage")]
+public partial class StockUsage
 {
     public int Id { get; set; }
 
@@ -15,5 +17,5 @@ public partial class stockusage
 
     public DateTime? UsedDate { get; set; }
 
-    public virtual stockitem? StockItem { get; set; }
+    public virtual StockItem? StockItem { get; set; }
 }

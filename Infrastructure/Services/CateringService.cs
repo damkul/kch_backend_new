@@ -1,12 +1,14 @@
 ﻿using kch_backend.Application.DTOs.Recipe;
 using kch_backend.Application.Interfaces;
 using kch_backend.Data;
+using kch_backend.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace kch_backend.Infrastructure.Services
 {
     public class CateringService : ICateringService
     {
-        /*private readonly KchDbContext _context;
+        private readonly KchDbContext _context;
 
         public CateringService(KchDbContext context)
         {
@@ -38,11 +40,11 @@ namespace kch_backend.Infrastructure.Services
 
             // Step 2: Fetch recipe and its ingredients
             var recipe = await _context.Recipes
-                .Include(r => r.RecipeIngredients)
+                .Include(r => r.recipeingredients)
                 .ThenInclude(ri => ri.Ingredient)
                 .FirstOrDefaultAsync(r => r.Id == dto.RecipeId);
 
-            if (recipe == null || recipe.RecipeIngredients.Count == 0)
+            if (recipe == null || recipe.recipeingredients.Count == 0)
                 throw new Exception("Recipe or ingredients not found.");
 
             // Step 3: Remove existing stock entries for the same event+recipe+mealType
@@ -51,7 +53,7 @@ namespace kch_backend.Infrastructure.Services
             _context.EventCateringStocks.RemoveRange(oldStock);
 
             // Step 4: Calculate required stock
-            foreach (var ri in recipe.RecipeIngredients)
+            foreach (var ri in recipe.recipeingredients)
             {
                 decimal requiredQty = (dto.NumberOfPeople / (decimal)recipe.StandardServingSize) * ri.Quantity;
 
@@ -85,15 +87,6 @@ namespace kch_backend.Infrastructure.Services
                     Unit = x.Unit,
                     RequiredQuantity = x.RequiredQuantity
                 }).ToListAsync();
-        }*/
-        public Task<bool> AssignCateringAsync(EventCateringDto dto)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<List<CateringStockDto>> GetStockByEventAsync(int eventId)
-        {
-            throw new NotImplementedException();
         }
     }
 }

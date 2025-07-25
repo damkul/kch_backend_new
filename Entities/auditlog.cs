@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace kch_backend.Entities;
 
-public partial class auditlog
+public partial class Auditlog
 {
     public int Id { get; set; }
 

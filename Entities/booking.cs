@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace kch_backend.Entities;
 
-public partial class booking
+public partial class Booking
 {
     public int Id { get; set; }
 
@@ -19,13 +19,13 @@ public partial class booking
 
     public decimal? TotalAmount { get; set; }
 
-    public virtual customer? Customer { get; set; }
+    public virtual Customer? Customer { get; set; }
 
-    public virtual room? Room { get; set; }
+    public virtual Room? Room { get; set; }
 
-    public virtual ICollection<eventmenu> eventmenus { get; set; } = new List<eventmenu>();
+    public virtual ICollection<EventMenu> eventmenus { get; set; } = new List<EventMenu>();
 
-    public virtual ICollection<invoice> invoices { get; set; } = new List<invoice>();
+    public virtual ICollection<Invoice> invoices { get; set; } = new List<Invoice>();
 
-    public virtual ICollection<roomallocation> roomallocations { get; set; } = new List<roomallocation>();
+    public virtual ICollection<RoomAllocation> roomallocations { get; set; } = new List<RoomAllocation>();
 }

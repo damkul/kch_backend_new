@@ -1,17 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace kch_backend.Entities;
 
-public partial class vendor
+[Table("Vendor")]
+public partial class Vendor
 {
     public int Id { get; set; }
 
-    public string? Name { get; set; }
+    public string Name { get; set; } = null!;
 
-    public string? ServiceType { get; set; }
+    public int CategoryId { get; set; }
 
-    public string? Contact { get; set; }
+    public string? ContactPerson { get; set; }
 
-    public virtual ICollection<vendorpayment> vendorpayments { get; set; } = new List<vendorpayment>();
+    public string? Phone { get; set; }
+
+    public string? Email { get; set; }
+
+    public string? Address { get; set; }
+
+    public string? GstNumber { get; set; }
+
+    public virtual VendorCategory Category { get; set; } = null!;
+
+    public virtual ICollection<EventVendor> eventvendors { get; set; } = new List<EventVendor>();
 }
