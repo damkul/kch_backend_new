@@ -1,13 +1,15 @@
 ﻿using kch_backend.Application.DTOs.Event;
 using kch_backend.Application.Interfaces;
+using kch_backend.Data;
+using kch_backend.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace kch_backend.Infrastructure.Services
 {
-    public class EventService 
+    public class EventService : IEventService
     {
-        /*private readonly KchDbContext _context;
+        private readonly KchDbContext _context;
 
         public EventService(KchDbContext context)
         {
@@ -89,7 +91,7 @@ namespace kch_backend.Infrastructure.Services
 
             foreach (var f in request.Facilities)
             {
-                var ef = new eventfacility
+                var ef = new EventFacility
                 {
                     EventId = e.Id,
                     FacilityId = f.FacilityId,
@@ -97,7 +99,7 @@ namespace kch_backend.Infrastructure.Services
                     Rate = f.Rate,
                     Total = f.Quantity * f.Rate
                 };
-                _context.eventfacilities.Add(ef);
+                _context.Eventfacilities.Add(ef);
             }
 
             await _context.SaveChangesAsync();
@@ -113,11 +115,11 @@ namespace kch_backend.Infrastructure.Services
 
             if (e == null) return false;
 
-            _context.eventfacilities.RemoveRange(e.eventfacilities);
+            _context.Eventfacilities.RemoveRange(e.eventfacilities);
             _context.events.Remove(e);
             await _context.SaveChangesAsync();
 
             return true;
-        }*/
+        }
     }
 }
