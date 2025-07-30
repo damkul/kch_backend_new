@@ -164,5 +164,39 @@ namespace kch_backend.Infrastructure.Services
                 throw;
             }
         }
+
+        public async Task<bool> UpdateVendorAsync(int id, VendorDto dto)
+        {
+            try
+            {
+                Log.Information("Updating vendor with ID: {Id}", id);
+
+                var vendor = await _context.Vendors.FindAsync(id);
+                if (vendor == null)
+                {
+                    Log.Warning("Vendor not found with ID: {Id}", id);
+                    return false;
+                }
+
+                vendor.Name = dto.Name;
+                vendor.CategoryId = dto.CategoryId;
+                vendor.ContactPerson = dto.ContactPerson;
+                vendor.Phone = dto.Phone;
+                vendor.Email = dto.Email;
+                vendor.Address = dto.Address;
+                vendor.GstNumber = dto.GstNumber;
+
+                await _context.SaveChangesAsync();
+
+                Log.Information("Vendor updated successfully with ID: {Id}", id);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error updating vendor with ID: {Id}", id);
+                throw;
+            }
+        }
+
     }
 }

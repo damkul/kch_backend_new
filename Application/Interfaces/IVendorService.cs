@@ -9,5 +9,7 @@ namespace kch_backend.Application.Interfaces
         Task<VendorDto?> GetVendorByIdAsync(int id);
         Task<bool> AddOrUpdateVendorAsync(VendorDto dto);
         Task<bool> DeleteVendorAsync(int id);
+        Task<bool> UpdateVendorAsync(int id, VendorDto dto);
+
     }
 }

@@ -1,5 +1,6 @@
 ﻿using kch_backend.Application.DTOs.Vendor;
 using kch_backend.Application.Interfaces;
+using kch_backend.Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace kch_backend.API.Controllers
@@ -21,27 +22,38 @@ namespace kch_backend.API.Controllers
             return Ok(await _service.GetCategoriesAsync());
         }
 
-        [HttpGet]
+        [HttpGet("getAllVendors")]
         public async Task<ActionResult<List<VendorDto>>> GetAll()
         {
             return Ok(await _service.GetAllVendorsAsync());
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("getVendorById/{id}")]
         public async Task<ActionResult<VendorDto?>> Get(int id)
         {
             var vendor = await _service.GetVendorByIdAsync(id);
             return vendor == null ? NotFound() : Ok(vendor);
         }
 
-        [HttpPost]
+        [HttpPost("addVendor")]
         public async Task<IActionResult> Save([FromBody] VendorDto dto)
         {
             var result = await _service.AddOrUpdateVendorAsync(dto);
             return result ? Ok(new { message = "Saved successfully" }) : BadRequest();
         }
 
-        [HttpDelete("{id}")]
+        // Update existing vendor
+        [HttpPut("updateVendor/{id}")]
+        public async Task<IActionResult> Update(int id, VendorDto dto)
+        {
+            var success = await _service.UpdateVendorAsync(id, dto);
+            if (!success)
+                return NotFound(new { Message = "Vendor not found" });
+
+            return Ok(new { Message = "Vendor updated successfully" });
+        }
+
+        [HttpDelete("deleteVendor/{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             var result = await _service.DeleteVendorAsync(id);

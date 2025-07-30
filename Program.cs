@@ -34,6 +34,9 @@ builder.Services.AddScoped<IEventService, EventService>();
 builder.Services.AddScoped<IReportService, ReportService>();
 builder.Services.AddScoped<IVendorPaymentService, VendorPaymentService>();
 builder.Services.AddScoped<IVendorService, VendorService>();
+builder.Services.AddScoped<ITimelineService, TimelineService>();
+builder.Services.AddScoped<IUserService, UserService>();
+
 
 var app = builder.Build();
 

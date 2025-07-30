@@ -1,8 +1,10 @@
-﻿using kch_backend.Application.DTOs.Recipe;
+﻿using kch_backend.Application.DTOs.Catering;
+using kch_backend.Application.DTOs.Recipe;
 using kch_backend.Application.Interfaces;
 using kch_backend.Data;
 using kch_backend.Entities;
 using Microsoft.EntityFrameworkCore;
+using MySql.Data.MySqlClient;
 using Serilog;
 
 namespace kch_backend.Infrastructure.Services
@@ -122,6 +124,15 @@ namespace kch_backend.Infrastructure.Services
                 Log.Error(ex, "Error fetching catering stock for EventId: {EventId}", eventId);
                 throw;
             }
+        }
+
+        public async Task<List<SelectedMenuItemDto>> GetSelectedMenuByEventAsync(int eventId)
+        {
+            var eventIdParam = new MySqlParameter("@inputEventId", eventId);
+
+            return await _context.Set<SelectedMenuItemDto>()
+                .FromSqlRaw("CALL GetSelectedMenuByEvent(@inputEventId)", eventIdParam)
+                .ToListAsync();
         }
     }
 }

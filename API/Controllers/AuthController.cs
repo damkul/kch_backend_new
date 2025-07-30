@@ -1,6 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using kch_backend.Infrastructure.Services;
-using Microsoft.AspNetCore.Mvc;
 using kch_backend.Application.DTOs.Auth;
 using kch_backend.Application.Interfaces;
 
@@ -17,6 +15,7 @@ namespace kch_backend.API.Controllers
             _authService = authService;
         }
 
+   
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginRequest request)
         {
@@ -24,6 +23,7 @@ namespace kch_backend.API.Controllers
             return Ok(response);
         }
 
+        
         [HttpPost("validate-fingerprint")]
         public IActionResult ValidateFingerprint([FromBody] string fingerprint)
         {
@@ -31,6 +31,7 @@ namespace kch_backend.API.Controllers
             return Ok(new { IsValid = isValid });
         }
 
+      
         [HttpPost("refresh")]
         public IActionResult RefreshToken([FromBody] RefreshTokenRequest request)
         {
