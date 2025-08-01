@@ -15,19 +15,19 @@ namespace kch_backend.API.Controllers
             _service = service;
         }
 
-        [HttpGet]
+        [HttpGet("getAllDecorations")]
         public async Task<ActionResult<List<DecorationDto>>> GetAll()
         {
             return Ok(await _service.GetAllDecorationsAsync());
         }
 
-        [HttpGet("event/{eventId}")]
+        [HttpGet("getDecorationForEvent/{eventId}")]
         public async Task<ActionResult<List<EventDecorationDto>>> GetEventDecorations(int eventId)
         {
             return Ok(await _service.GetEventDecorationsAsync(eventId));
         }
 
-        [HttpPost("assign/{eventId}")]
+        [HttpPost("addDecorationToEvent/{eventId}")]
         public async Task<IActionResult> AssignToEvent(int eventId, [FromBody] List<EventDecorationDto> items)
         {
             if (await _service.AssignDecorationsAsync(eventId, items))

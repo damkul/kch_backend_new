@@ -14,9 +14,18 @@ namespace kch_backend.API.Controllers
         {
             _service = service;
         }
+      
+
+        [HttpPost("getAllPayments")]
+        public async Task<IActionResult> GetAllPayments([FromBody] VendorPaymentFilterRequest filter)
+        {
+            var payments = await _service.GetAllPaymentsAsync(filter.EventId);
+            return Ok(payments);
+        }
+
 
         // GET: api/vendor-payments/event-vendor/5
-        [HttpGet("event-vendor/{eventVendorId}")]
+        [HttpGet("getPaymentByEvent/{eventVendorId}")]
         public async Task<ActionResult<List<VendorPaymentDto>>> GetPaymentsByEventVendor(int eventVendorId)
         {
             var result = await _service.GetPaymentsByEventVendorAsync(eventVendorId);
@@ -24,7 +33,7 @@ namespace kch_backend.API.Controllers
         }
 
         // POST: api/vendor-payments
-        [HttpPost]
+        [HttpPost("addVendorPayment")]
         public async Task<IActionResult> AddPayment([FromBody] VendorPaymentDto dto)
         {
             var result = await _service.AddPaymentAsync(dto);
@@ -32,11 +41,22 @@ namespace kch_backend.API.Controllers
         }
 
         // DELETE: api/vendor-payments/5
-        [HttpDelete("{id}")]
+        [HttpDelete("deleteVendor/{id}")]
         public async Task<IActionResult> DeletePayment(int id)
         {
             var result = await _service.DeletePaymentAsync(id);
             return result ? Ok(new { message = "Payment deleted." }) : NotFound();
         }
+
+        [HttpPut("updatePayment")]
+        public async Task<IActionResult> UpdatePayment([FromBody] VendorPaymentUpdateRequest request)
+        {
+            var result = await _service.UpdatePaymentAsync(request);
+            if (!result)
+                return NotFound(new { message = "Vendor payment not found or event mismatch." });
+
+            return Ok(new { message = "Vendor payment updated successfully." });
+        }
+
     }
 }

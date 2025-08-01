@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("kch_backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7b8318a1801830939a5d3b975825096d0810881")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7c15935e6c8c9586db3b388ec5bb0bc9a81f08d")]
 [assembly: System.Reflection.AssemblyProductAttribute("kch_backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("kch_backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

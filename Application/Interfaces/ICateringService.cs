@@ -9,5 +9,6 @@ namespace kch_backend.Application.Interfaces
         Task<List<CateringStockDto>> GetStockByEventAsync(int eventId);
 
         Task<List<SelectedMenuItemDto>> GetSelectedMenuByEventAsync(int eventId);
+        Task<List<GroupedRecipeDto>> GetGroupedDetailedMenuForEventAsync(int eventId);
     }
 }

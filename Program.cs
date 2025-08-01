@@ -38,6 +38,26 @@ builder.Services.AddScoped<ITimelineService, TimelineService>();
 builder.Services.AddScoped<IUserService, UserService>();
 
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        policy =>
+        {
+            policy
+                .AllowAnyOrigin()   // Allow any domain (you can restrict later)
+                .AllowAnyMethod()   // GET, POST, PUT, DELETE
+                .AllowAnyHeader();  // Allow custom headers
+        });
+});
+
+builder.WebHost.ConfigureKestrel(serverOptions =>
+{
+    serverOptions.ListenAnyIP(5047); // HTTP
+    
+});
+
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -46,6 +66,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("AllowAll");
 
 app.UseHttpsRedirection();
 

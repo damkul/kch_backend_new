@@ -16,34 +16,34 @@ namespace kch_backend.API.Controllers
             _service = service;
         }
 
-        [HttpGet]
+        [HttpGet("getAll")]
         public async Task<ActionResult<IEnumerable<BranchDto>>> GetAll()
         {
             return Ok(await _service.GetAllAsync());
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("getById/{id}")]
         public async Task<ActionResult<BranchDto>> GetById(int id)
         {
             var branch = await _service.GetByIdAsync(id);
             return branch == null ? NotFound() : Ok(branch);
         }
 
-        [HttpPost]
+        [HttpPost("addBranch")]
         public async Task<ActionResult<BranchDto>> Create(BranchDto dto)
         {
             var created = await _service.AddAsync(dto);
             return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("updateBranch/{id}")]
         public async Task<ActionResult<BranchDto>> Update(int id, BranchDto dto)
         {
             var updated = await _service.UpdateAsync(id, dto);
             return updated == null ? NotFound() : Ok(updated);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("deleteBranch/{id}")]
         public async Task<IActionResult> Delete(int id)
         {
             var success = await _service.DeleteAsync(id);

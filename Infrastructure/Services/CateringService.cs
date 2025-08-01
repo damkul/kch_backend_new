@@ -134,5 +134,78 @@ namespace kch_backend.Infrastructure.Services
                 .FromSqlRaw("CALL GetSelectedMenuByEvent(@inputEventId)", eventIdParam)
                 .ToListAsync();
         }
+
+        public async Task<List<GroupedRecipeDto>> GetGroupedDetailedMenuForEventAsync(int eventId)
+        {
+            var eventIdParam = new MySqlParameter("@inputEventId", eventId);
+
+            // Fetch flat result from stored procedure
+            var flatList = await _context.Set<DetailedMenuRecipeNestedDto>()
+                .FromSqlRaw("CALL GetFullDetailedMenuForEvent(@inputEventId)", eventIdParam)
+                .ToListAsync();
+
+            // Group by Recipe
+            var grouped = flatList
+                .GroupBy(r => new
+                {
+                    r.EventId,
+                    r.EventName,
+                    r.RecipeId,
+                    r.RecipeName,
+                    r.CategoryId,
+                    r.CategoryName,
+                    r.MealType,
+                    r.NumberOfPeople,
+                    r.StandardServingSize,
+                    r.RecipeDescription,
+                    r.CookingMethod
+                })
+                .Select(g => new GroupedRecipeDto
+                {
+                    EventId = g.Key.EventId,
+                    EventName = g.Key.EventName,
+                    RecipeId = g.Key.RecipeId,
+                    RecipeName = g.Key.RecipeName,
+                    CategoryId = g.Key.CategoryId,
+                    CategoryName = g.Key.CategoryName,
+                    MealType = g.Key.MealType,
+                    NumberOfPeople = g.Key.NumberOfPeople,
+                    StandardServingSize = g.Key.StandardServingSize,
+                    RecipeDescription = g.Key.RecipeDescription,
+                    CookingMethod = g.Key.CookingMethod,
+                    Ingredients = g.Select(i =>
+                    {
+                        var totalQty = Math.Round(
+                            (g.Key.NumberOfPeople / (decimal)g.Key.StandardServingSize) * i.Quantity, 2
+                        );
+                        return new IngredientGroupDto
+                        {
+                            IngredientId = i.IngredientId,
+                            IngredientName = i.IngredientName,
+                            Quantity = i.Quantity,
+                            Unit = i.Unit,
+                            TotalQuantity = totalQty,
+                            DisplayQuantity = ConvertToReadableUnit(totalQty, i.Unit)
+                        };
+                    }).ToList()
+                })
+                .ToList();
+
+            return grouped;
+        }
+
+
+        private string ConvertToReadableUnit(decimal quantity, string unit)
+        {
+            if (unit.Equals("g", StringComparison.OrdinalIgnoreCase) && quantity >= 1000)
+                return $"{Math.Round(quantity / 1000, 2)} kg";
+
+            if (unit.Equals("ml", StringComparison.OrdinalIgnoreCase) && quantity >= 1000)
+                return $"{Math.Round(quantity / 1000, 2)} l";
+
+            return $"{quantity} {unit}";
+        }
+
+
     }
 }

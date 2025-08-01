@@ -1,5 +1,6 @@
 ﻿using kch_backend.Application.DTOs.Recipe;
 using kch_backend.Application.Interfaces;
+using kch_backend.Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace kch_backend.API.Controllers
@@ -15,7 +16,7 @@ namespace kch_backend.API.Controllers
             _service = service;
         }
 
-        [HttpPost("assign")]
+        [HttpPost("addCatering")]
         public async Task<IActionResult> AssignCatering([FromBody] EventCateringDto dto)
         {
             try
@@ -30,11 +31,22 @@ namespace kch_backend.API.Controllers
             }
         }
 
-        [HttpGet("stock/{eventId}")]
+        [HttpGet("getCateringStock/{eventId}")]
         public async Task<ActionResult<List<CateringStockDto>>> GetCateringStock(int eventId)
         {
             var result = await _service.GetStockByEventAsync(eventId);
             return Ok(result);
         }
+
+        [HttpGet("event-detailed-menu-grouped/{eventId}")]
+        public async Task<IActionResult> GetGroupedDetailedMenuForEvent(int eventId)
+        {
+            var result = await _service.GetGroupedDetailedMenuForEventAsync(eventId);
+            if (result == null || result.Count == 0)
+                return NotFound(new { Message = "No detailed menu found for this event" });
+
+            return Ok(result);
+        }
+
     }
 }

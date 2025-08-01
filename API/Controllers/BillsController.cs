@@ -16,7 +16,7 @@ namespace kch_backend.API.Controllers
         }
 
         // POST: api/bills/generate/5
-        [HttpPost("generate/{eventId}")]
+        [HttpPost("generateBill/{eventId}")]
         public async Task<ActionResult<BillDto>> GenerateBill(int eventId)
         {
             try
@@ -31,7 +31,7 @@ namespace kch_backend.API.Controllers
         }
 
         // GET: api/bills/event/5
-        [HttpGet("event/{eventId}")]
+        [HttpGet("generateBillForEvent/{eventId}")]
         public async Task<ActionResult<BillDto>> GetBillByEvent(int eventId)
         {
             var bill = await _billingService.GetBillByEventIdAsync(eventId);

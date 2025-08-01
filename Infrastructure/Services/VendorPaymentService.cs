@@ -99,5 +99,84 @@ namespace kch_backend.Infrastructure.Services
                 throw;
             }
         }
+
+        public async Task<List<VendorPaymentDto>> GetAllPaymentsAsync(int? eventId)
+        {
+            try
+            {
+                Log.Information("Fetching vendor payments with optional EventId filter: {EventId}", eventId);
+
+                var query = _context.Vendorpayments.AsQueryable();
+
+                if (eventId.HasValue)
+                {
+                    query = query.Where(p => p.EventVendor.EventId == eventId.Value);
+                }
+
+                var result = await query
+                    .OrderByDescending(p => p.PaymentDate)
+                    .Select(p => new VendorPaymentDto
+                    {
+                        Id = p.Id,
+                        EventVendorId = p.EventVendorId,
+                        PaymentDate = p.PaymentDate,
+                        AmountPaid = p.AmountPaid,
+                        PaymentMode = p.PaymentMode,
+                        Remarks = p.Remarks
+                    })
+                    .ToListAsync();
+
+                Log.Information("Fetched {Count} vendor payments", result.Count);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error fetching vendor payments");
+                throw;
+            }
+        }
+
+        public async Task<bool> UpdatePaymentAsync(VendorPaymentUpdateRequest request)
+        {
+            try
+            {
+                Log.Information("Updating vendor payment with ID: {Id}", request.Id);
+
+                var payment = await _context.Vendorpayments
+                    .Include(p => p.EventVendor)
+                    .FirstOrDefaultAsync(p => p.Id == request.Id);
+
+                if (payment == null)
+                {
+                    Log.Warning("Vendor payment not found with ID: {Id}", request.Id);
+                    return false;
+                }
+
+                // Optional EventId filter check
+                if (request.EventId.HasValue && payment.EventVendor.EventId != request.EventId.Value)
+                {
+                    Log.Warning("Vendor payment ID: {Id} does not match EventId: {EventId}", request.Id, request.EventId);
+                    return false;
+                }
+
+                payment.EventVendorId = request.EventVendorId;
+                payment.PaymentDate = request.PaymentDate;
+                payment.AmountPaid = request.AmountPaid;
+                payment.PaymentMode = request.PaymentMode;
+                payment.Remarks = request.Remarks;
+
+                await _context.SaveChangesAsync();
+
+                Log.Information("Vendor payment updated successfully with ID: {Id}", request.Id);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error updating vendor payment with ID: {Id}", request.Id);
+                throw;
+            }
+        }
+
+
     }
 }

@@ -16,7 +16,7 @@ namespace kch_backend.API.Controllers
             _service = service;
         }
 
-        [HttpGet("categories")]
+        [HttpGet("getAllVendorCategories")]
         public async Task<ActionResult<List<VendorCategoryDto>>> GetCategories()
         {
             return Ok(await _service.GetCategoriesAsync());
