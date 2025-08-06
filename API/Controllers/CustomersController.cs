@@ -1,9 +1,12 @@
 ﻿using kch_backend.Application.DTOs.Customer;
 using kch_backend.Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace kch_backend.API.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class CustomersController : ControllerBase
     {
         private readonly ICustomerService _service;
@@ -27,17 +30,41 @@ namespace kch_backend.API.Controllers
         }
 
         [HttpPost("addCustomer")]
-        public async Task<ActionResult<CustomerDto>> Create(CustomerDto dto)
+        public async Task<ActionResult> Create([FromBody] JsonElement requestBody)
         {
-            var created = await _service.AddAsync(dto);
-            return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
+            if (requestBody.ValueKind == JsonValueKind.Array)
+            {
+                var customers = JsonSerializer.Deserialize<List<CustomerDto>>(requestBody.ToString());
+                var created = await _service.AddAsync(customers);
+                return Ok(created);
+            }
+            else if (requestBody.ValueKind == JsonValueKind.Object)
+            {
+                var customer = JsonSerializer.Deserialize<CustomerDto>(requestBody.ToString());
+                var created = await _service.AddAsync(customer);
+                return CreatedAtAction(nameof(GetById), new { id = created.Id }, created);
+            }
+
+            return BadRequest("Invalid request format.");
         }
 
-        [HttpPut("updateCustomer/{id}")]
-        public async Task<ActionResult<CustomerDto>> Update(int id, CustomerDto dto)
+        [HttpPut("updateCustomer")]
+        public async Task<ActionResult> Update([FromBody] JsonElement requestBody)
         {
-            var updated = await _service.UpdateAsync(id, dto);
-            return updated == null ? NotFound() : Ok(updated);
+            if (requestBody.ValueKind == JsonValueKind.Array)
+            {
+                var customers = JsonSerializer.Deserialize<List<CustomerDto>>(requestBody.ToString());
+                var updated = await _service.UpdateAsync(customers);
+                return Ok(updated);
+            }
+            else if (requestBody.ValueKind == JsonValueKind.Object)
+            {
+                var customer = JsonSerializer.Deserialize<CustomerDto>(requestBody.ToString());
+                var updated = await _service.UpdateAsync(customer.Id, customer);
+                return updated == null ? NotFound() : Ok(updated);
+            }
+
+            return BadRequest("Invalid request format.");
         }
 
         [HttpDelete("delete/customer{id}")]

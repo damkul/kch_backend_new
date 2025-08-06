@@ -17,6 +17,8 @@ public partial class Customer
 
     public int? BranchId { get; set; }
 
+    public int? EventId { get; set; } // ✅ New FK column
+
     public string? Aadhaar { get; set; }
 
     public DateTime? CreatedOn { get; set; }
@@ -24,6 +26,7 @@ public partial class Customer
     public string? Address { get; set; }
 
     public virtual Branch? Branch { get; set; }
+    public virtual Event? Event { get; set; }
 
     public virtual ICollection<Booking> bookings { get; set; } = new List<Booking>();
 

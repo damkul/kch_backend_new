@@ -25,9 +25,10 @@ namespace kch_backend.Infrastructure.Services
                 var fromParam = new MySqlParameter("@fromDate", from ?? (object)DBNull.Value);
                 var toParam = new MySqlParameter("@toDate", to ?? (object)DBNull.Value);
 
-                var result = await _context.Set<EventSummaryDto>()
+                var result = _context.EventSummaries
                     .FromSqlRaw("CALL GetEventSummaries(@fromDate, @toDate)", fromParam, toParam)
-                    .ToListAsync();
+                    .AsEnumerable()
+                    .ToList();
 
                 Log.Information("Event Summary Report generated with {Count} records", result.Count);
                 return result;
@@ -45,9 +46,10 @@ namespace kch_backend.Infrastructure.Services
             {
                 Log.Information("Generating Customer Billing Report");
 
-                var result = await _context.Set<CustomerBillingDto>()
+                var result = _context.CustomerBillings
                     .FromSqlRaw("CALL GetCustomerBillingReport()")
-                    .ToListAsync();
+                    .AsEnumerable()
+                    .ToList();
 
                 Log.Information("Customer Billing Report generated with {Count} records", result.Count);
                 return result;
@@ -67,9 +69,10 @@ namespace kch_backend.Infrastructure.Services
 
                 var eventIdParam = new MySqlParameter("@eventId", eventId ?? (object)DBNull.Value);
 
-                var result = await _context.Set<StockRequirementDto>()
+                var result = _context.StockRequirements
                     .FromSqlRaw("CALL GetStockRequirementSummary(@eventId)", eventIdParam)
-                    .ToListAsync();
+                    .AsEnumerable()
+                    .ToList();
 
                 Log.Information("Stock Requirement Summary generated with {Count} records", result.Count);
                 return result;
@@ -87,9 +90,10 @@ namespace kch_backend.Infrastructure.Services
             {
                 Log.Information("Generating Vendor Payment Report");
 
-                var result = await _context.Set<VendorPaymentReportDto>()
+                var result = _context.VendorPaymentReports
                     .FromSqlRaw("CALL GetVendorPaymentReport()")
-                    .ToListAsync();
+                    .AsEnumerable()
+                    .ToList();
 
                 Log.Information("Vendor Payment Report generated with {Count} records", result.Count);
                 return result;
@@ -109,9 +113,10 @@ namespace kch_backend.Infrastructure.Services
 
                 var dateParam = new MySqlParameter("@targetDate", date);
 
-                var result = await _context.Set<PaymentSummaryDto>()
+                var result = _context.DailyPayments
                     .FromSqlRaw("CALL GetDailyPaymentReport(@targetDate)", dateParam)
-                    .ToListAsync();
+                    .AsEnumerable()
+                    .ToList();
 
                 Log.Information("Daily Payment Report generated with {Count} records", result.Count);
                 return result;
@@ -131,9 +136,10 @@ namespace kch_backend.Infrastructure.Services
 
                 var ymParam = new MySqlParameter("@yearMonth", yearMonth);
 
-                var result = await _context.Set<MonthlyPaymentDto>()
+                var result = _context.MonthlyPayments
                     .FromSqlRaw("CALL GetMonthlyPaymentReport(@yearMonth)", ymParam)
-                    .ToListAsync();
+                    .AsEnumerable()
+                    .ToList();
 
                 Log.Information("Monthly Payment Report generated with {Count} records", result.Count);
                 return result;
@@ -145,4 +151,5 @@ namespace kch_backend.Infrastructure.Services
             }
         }
     }
+
 }

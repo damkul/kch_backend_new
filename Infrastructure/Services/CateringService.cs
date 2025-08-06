@@ -128,71 +128,100 @@ namespace kch_backend.Infrastructure.Services
 
         public async Task<List<SelectedMenuItemDto>> GetSelectedMenuByEventAsync(int eventId)
         {
-            var eventIdParam = new MySqlParameter("@inputEventId", eventId);
+            try
+            {
+                Log.Information("Fetching selected menu for EventId: {EventId}", eventId);
 
-            return await _context.Set<SelectedMenuItemDto>()
-                .FromSqlRaw("CALL GetSelectedMenuByEvent(@inputEventId)", eventIdParam)
-                .ToListAsync();
+                var eventIdParam = new MySqlParameter("@inputEventId", eventId);
+
+                // Direct SP call, no LINQ composition → safe
+                var result = _context.Set<SelectedMenuItemDto>()
+                    .FromSqlRaw("CALL GetSelectedMenuByEvent(@inputEventId)", eventIdParam)
+                    .AsEnumerable() // ✅ Prevents EF from composing over SP
+                    .ToList();
+
+                Log.Information("Fetched {Count} selected menu items for EventId: {EventId}", result.Count, eventId);
+                return result;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error fetching selected menu for EventId: {EventId}", eventId);
+                throw;
+            }
         }
+
 
         public async Task<List<GroupedRecipeDto>> GetGroupedDetailedMenuForEventAsync(int eventId)
         {
-            var eventIdParam = new MySqlParameter("@inputEventId", eventId);
+            try
+            {
+                Log.Information("Fetching grouped detailed menu for EventId: {EventId}", eventId);
 
-            // Fetch flat result from stored procedure
-            var flatList = await _context.Set<DetailedMenuRecipeNestedDto>()
-                .FromSqlRaw("CALL GetFullDetailedMenuForEvent(@inputEventId)", eventIdParam)
-                .ToListAsync();
+                var eventIdParam = new MySqlParameter("@inputEventId", eventId);
 
-            // Group by Recipe
-            var grouped = flatList
-                .GroupBy(r => new
-                {
-                    r.EventId,
-                    r.EventName,
-                    r.RecipeId,
-                    r.RecipeName,
-                    r.CategoryId,
-                    r.CategoryName,
-                    r.MealType,
-                    r.NumberOfPeople,
-                    r.StandardServingSize,
-                    r.RecipeDescription,
-                    r.CookingMethod
-                })
-                .Select(g => new GroupedRecipeDto
-                {
-                    EventId = g.Key.EventId,
-                    EventName = g.Key.EventName,
-                    RecipeId = g.Key.RecipeId,
-                    RecipeName = g.Key.RecipeName,
-                    CategoryId = g.Key.CategoryId,
-                    CategoryName = g.Key.CategoryName,
-                    MealType = g.Key.MealType,
-                    NumberOfPeople = g.Key.NumberOfPeople,
-                    StandardServingSize = g.Key.StandardServingSize,
-                    RecipeDescription = g.Key.RecipeDescription,
-                    CookingMethod = g.Key.CookingMethod,
-                    Ingredients = g.Select(i =>
+                // Fetch flat result from stored procedure
+                var flatList = _context.Set<DetailedMenuRecipeNestedDto>()
+                    .FromSqlRaw("CALL GetFullDetailedMenuForEvent(@inputEventId)", eventIdParam)
+                    .AsEnumerable() // ✅ Move to memory before GroupBy
+                    .ToList();
+
+                // Group by Recipe in-memory
+                var grouped = flatList
+                    .GroupBy(r => new
                     {
-                        var totalQty = Math.Round(
-                            (g.Key.NumberOfPeople / (decimal)g.Key.StandardServingSize) * i.Quantity, 2
-                        );
-                        return new IngredientGroupDto
+                        r.EventId,
+                        r.EventName,
+                        r.RecipeId,
+                        r.RecipeName,
+                        r.CategoryId,
+                        r.CategoryName,
+                        r.MealType,
+                        r.NumberOfPeople,
+                        r.StandardServingSize,
+                        r.RecipeDescription,
+                        r.CookingMethod
+                    })
+                    .Select(g => new GroupedRecipeDto
+                    {
+                        EventId = g.Key.EventId,
+                        EventName = g.Key.EventName,
+                        RecipeId = g.Key.RecipeId,
+                        RecipeName = g.Key.RecipeName,
+                        CategoryId = g.Key.CategoryId,
+                        CategoryName = g.Key.CategoryName,
+                        MealType = g.Key.MealType,
+                        NumberOfPeople = g.Key.NumberOfPeople,
+                        StandardServingSize = g.Key.StandardServingSize,
+                        RecipeDescription = g.Key.RecipeDescription,
+                        CookingMethod = g.Key.CookingMethod,
+                        Ingredients = g.Select(i =>
                         {
-                            IngredientId = i.IngredientId,
-                            IngredientName = i.IngredientName,
-                            Quantity = i.Quantity,
-                            Unit = i.Unit,
-                            TotalQuantity = totalQty,
-                            DisplayQuantity = ConvertToReadableUnit(totalQty, i.Unit)
-                        };
-                    }).ToList()
-                })
-                .ToList();
+                            var totalQty = Math.Round(
+                                (g.Key.NumberOfPeople / (decimal)g.Key.StandardServingSize) * i.Quantity, 2
+                            );
+                            return new IngredientGroupDto
+                            {
+                                IngredientId = i.IngredientId,
+                                IngredientName = i.IngredientName,
+                                Quantity = i.Quantity,
+                                Unit = i.Unit,
+                                TotalQuantity = totalQty,
+                                DisplayQuantity = ConvertToReadableUnit(totalQty, i.Unit)
+                            };
+                        }).ToList()
+                    })
+                    .ToList();
 
-            return grouped;
+                Log.Information("Grouped detailed menu created for EventId: {EventId}", eventId);
+                return grouped;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error fetching grouped detailed menu for EventId: {EventId}", eventId);
+                throw;
+            }
         }
+
 
 
         private string ConvertToReadableUnit(decimal quantity, string unit)

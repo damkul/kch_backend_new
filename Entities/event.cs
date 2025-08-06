@@ -38,4 +38,6 @@ public partial class Event
     public virtual ICollection<EventFacility> eventfacilities { get; set; } = new List<EventFacility>();
 
     public virtual ICollection<EventVendor> eventvendors { get; set; } = new List<EventVendor>();
+
+    public virtual ICollection<Customer> Customers { get; set; } = new List<Customer>(); // ✅
 }

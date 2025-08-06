@@ -2,7 +2,7 @@
 {
     public class PaymentSummaryDto
     {
-        public string PaymentType { get; set; } = ""; // Customer or Vendor
+        public string PaymentMode { get; set; } = ""; // Customer or Vendor
         public DateTime PaymentDate { get; set; }
         public decimal Total { get; set; }
     }

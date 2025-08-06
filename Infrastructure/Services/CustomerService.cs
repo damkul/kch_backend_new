@@ -16,157 +16,139 @@ namespace kch_backend.Infrastructure.Services
             _context = context;
         }
 
-        public async Task<List<CustomerDto>> GetAllAsync()
+        public async Task<List<CustomerDto>> AddAsync(List<CustomerDto> dtos)
         {
-            try
+            Log.Information("Adding {Count} customers", dtos.Count);
+
+            // ✅ Ensure all customers in batch share same EventId if one is provided
+            int? eventId = dtos.FirstOrDefault()?.EventId;
+            if (eventId.HasValue)
             {
-                Log.Information("Fetching all customers");
-
-                var customers = await _context.Customers
-                    .Select(c => new CustomerDto
-                    {
-                        Id = c.Id,
-                        BranchId = (int)c.BranchId,
-                        Name = c.Name,
-                        Contact = c.Contact,
-                        Email = c.Email,
-                        Aadhaar = c.Aadhaar,
-                        Address = c.Address,
-                        CreatedOn = (DateTime)c.CreatedOn
-                    })
-                    .ToListAsync();
-
-                Log.Information("Fetched {Count} customers", customers.Count);
-                return customers;
-            }
-            catch (Exception ex)
-            {
-                Log.Error(ex, "Error while fetching customer list");
-                throw;
-            }
-        }
-
-        public async Task<CustomerDto?> GetByIdAsync(int id)
-        {
-            try
-            {
-                Log.Information("Fetching customer by ID: {Id}", id);
-                var customer = await _context.Customers.FindAsync(id);
-
-                if (customer == null)
+                foreach (var dto in dtos)
                 {
-                    Log.Warning("Customer not found with ID: {Id}", id);
-                    return null;
+                    dto.EventId = eventId;
                 }
+            }
 
-                return new CustomerDto
-                {
-                    Id = customer.Id,
-                    BranchId = (int)customer.BranchId,
-                    Name = customer.Name,
-                    Contact = customer.Contact,
-                    Email = customer.Email,
-                    Aadhaar = customer.Aadhaar,
-                    Address = customer.Address,
-                    CreatedOn = (DateTime)customer.CreatedOn
-                };
-            }
-            catch (Exception ex)
+            var customers = dtos.Select(dto => new Customer
             {
-                Log.Error(ex, "Error while fetching customer with ID: {Id}", id);
-                throw;
+                BranchId = dto.BranchId,
+                EventId = dto.EventId,
+                Name = dto.Name,
+                Contact = dto.Contact,
+                Email = dto.Email,
+                Aadhaar = dto.Aadhaar,
+                Address = dto.Address,
+                CreatedOn = DateTime.UtcNow
+            }).ToList();
+
+            _context.Customers.AddRange(customers);
+            await _context.SaveChangesAsync();
+
+            for (int i = 0; i < customers.Count; i++)
+            {
+                dtos[i].Id = customers[i].Id;
+                dtos[i].CreatedOn = (DateTime)customers[i].CreatedOn;
             }
+
+            return dtos;
         }
 
         public async Task<CustomerDto> AddAsync(CustomerDto dto)
         {
-            try
-            {
-                Log.Information("Adding new customer: {Name}", dto.Name);
+            var result = await AddAsync(new List<CustomerDto> { dto });
+            return result.First();
+        }
 
-                var customer = new Customer
+        public async Task<List<CustomerDto>> UpdateAsync(List<CustomerDto> dtos)
+        {
+            Log.Information("Updating {Count} customers", dtos.Count);
+
+            // ✅ If batch update includes EventId, apply it to all customers
+            int? eventId = dtos.FirstOrDefault()?.EventId;
+            if (eventId.HasValue)
+            {
+                foreach (var dto in dtos)
                 {
-                    BranchId = dto.BranchId,
-                    Name = dto.Name,
-                    Contact = dto.Contact,
-                    Email = dto.Email,
-                    Aadhaar = dto.Aadhaar,
-                    Address = dto.Address,
-                    CreatedOn = DateTime.UtcNow
-                };
-
-                _context.Customers.Add(customer);
-                await _context.SaveChangesAsync();
-
-                dto.Id = customer.Id;
-                dto.CreatedOn = (DateTime)customer.CreatedOn;
-
-                Log.Information("Customer added successfully with ID: {Id}", dto.Id);
-                return dto;
+                    dto.EventId = eventId;
+                }
             }
-            catch (Exception ex)
+
+            foreach (var dto in dtos)
             {
-                Log.Error(ex, "Error while adding customer: {Name}", dto.Name);
-                throw;
+                var customer = await _context.Customers.FindAsync(dto.Id);
+                if (customer != null)
+                {
+                    customer.Name = dto.Name;
+                    customer.Contact = dto.Contact;
+                    customer.Email = dto.Email;
+                    customer.Aadhaar = dto.Aadhaar;
+                    customer.Address = dto.Address;
+                    customer.BranchId = dto.BranchId;
+                    customer.EventId = dto.EventId;
+                }
+                else
+                {
+                    Log.Warning("Customer with ID {Id} not found for update", dto.Id);
+                }
             }
+
+            await _context.SaveChangesAsync();
+            return dtos;
         }
 
         public async Task<CustomerDto?> UpdateAsync(int id, CustomerDto dto)
         {
-            try
-            {
-                Log.Information("Updating customer with ID: {Id}", id);
-                var customer = await _context.Customers.FindAsync(id);
+            dto.Id = id;
+            var result = await UpdateAsync(new List<CustomerDto> { dto });
+            return result.FirstOrDefault();
+        }
 
-                if (customer == null)
+        public async Task<List<CustomerDto>> GetAllAsync()
+        {
+            return await _context.Customers
+                .Select(c => new CustomerDto
                 {
-                    Log.Warning("Customer not found for update with ID: {Id}", id);
-                    return null;
-                }
+                    Id = c.Id,
+                    BranchId = (int)c.BranchId,
+                    EventId = c.EventId, // ✅ Now included in DTO
+                    Name = c.Name,
+                    Contact = c.Contact,
+                    Email = c.Email,
+                    Aadhaar = c.Aadhaar,
+                    Address = c.Address,
+                    CreatedOn = (DateTime)c.CreatedOn
+                })
+                .ToListAsync();
+        }
 
-                customer.Name = dto.Name;
-                customer.Contact = dto.Contact;
-                customer.Email = dto.Email;
-                customer.Aadhaar = dto.Aadhaar;
-                customer.Address = dto.Address;
-                customer.BranchId = dto.BranchId;
+        public async Task<CustomerDto?> GetByIdAsync(int id)
+        {
+            var customer = await _context.Customers.FindAsync(id);
+            if (customer == null) return null;
 
-                await _context.SaveChangesAsync();
-
-                Log.Information("Customer updated successfully with ID: {Id}", id);
-                return dto;
-            }
-            catch (Exception ex)
+            return new CustomerDto
             {
-                Log.Error(ex, "Error while updating customer with ID: {Id}", id);
-                throw;
-            }
+                Id = customer.Id,
+                BranchId = (int)customer.BranchId,
+                EventId = customer.EventId, // ✅ Now included in DTO
+                Name = customer.Name,
+                Contact = customer.Contact,
+                Email = customer.Email,
+                Aadhaar = customer.Aadhaar,
+                Address = customer.Address,
+                CreatedOn = (DateTime)customer.CreatedOn
+            };
         }
 
         public async Task<bool> DeleteAsync(int id)
         {
-            try
-            {
-                Log.Information("Deleting customer with ID: {Id}", id);
-                var customer = await _context.Customers.FindAsync(id);
+            var customer = await _context.Customers.FindAsync(id);
+            if (customer == null) return false;
 
-                if (customer == null)
-                {
-                    Log.Warning("Customer not found for deletion with ID: {Id}", id);
-                    return false;
-                }
-
-                _context.Customers.Remove(customer);
-                await _context.SaveChangesAsync();
-
-                Log.Information("Customer deleted successfully with ID: {Id}", id);
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Log.Error(ex, "Error while deleting customer with ID: {Id}", id);
-                throw;
-            }
+            _context.Customers.Remove(customer);
+            await _context.SaveChangesAsync();
+            return true;
         }
     }
 }

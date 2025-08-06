@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using kch_backend.Entities;
+using kch_backend.Application.DTOs.Home;
+using kch_backend.Application.DTOs.Reports;
 
 namespace kch_backend.Data;
 
@@ -70,8 +72,26 @@ public partial class KchDbContext : DbContext
 
     public virtual DbSet<VendorPayment> Vendorpayments { get; set; }
 
+    public DbSet<EventDetailDto> CurrentMonthEvents { get; set; }
+    public DbSet<CountDto> EventCounts { get; set; }
+    public DbSet<MonthlyPaymentDto> MonthlyPayments { get; internal set; }
+    public DbSet<PaymentSummaryDto> DailyPayments { get; internal set; }
+    public DbSet<VendorPaymentReportDto> VendorPaymentReports { get; internal set; }
+    public DbSet<StockRequirementDto> StockRequirements { get; internal set; }
+    public DbSet<CustomerBillingDto> CustomerBillings { get; internal set; }
+    public DbSet<EventSummaryDto> EventSummaries { get; internal set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<EventDetailDto>().HasNoKey();
+        modelBuilder.Entity<CountDto>().HasNoKey();
+        modelBuilder.Entity<MonthlyPaymentDto>().HasNoKey();
+        modelBuilder.Entity<PaymentSummaryDto>().HasNoKey();
+        modelBuilder.Entity<VendorPaymentReportDto>().HasNoKey();
+        modelBuilder.Entity<StockRequirementDto>().HasNoKey();
+        modelBuilder.Entity<CustomerBillingDto>().HasNoKey();
+        modelBuilder.Entity<EventSummaryDto>().HasNoKey();
+
         modelBuilder.Entity<Auditlog>(entity =>
         {
             entity.HasKey(e => e.Id).HasName("PRIMARY");
@@ -176,6 +196,10 @@ public partial class KchDbContext : DbContext
             entity.HasOne(d => d.Branch).WithMany(p => p.customers)
                 .HasForeignKey(d => d.BranchId)
                 .HasConstraintName("FK_Customers_Branch");
+            entity.HasOne(d => d.Event)
+        .WithMany(p => p.Customers) // Customers collection in Event entity
+        .HasForeignKey(d => d.EventId)
+        .HasConstraintName("FK_Customers_Event");
         });
 
         modelBuilder.Entity<Decoration>(entity =>

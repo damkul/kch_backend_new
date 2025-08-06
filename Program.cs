@@ -35,7 +35,8 @@ builder.Services.AddScoped<IReportService, ReportService>();
 builder.Services.AddScoped<IVendorPaymentService, VendorPaymentService>();
 builder.Services.AddScoped<IVendorService, VendorService>();
 builder.Services.AddScoped<ITimelineService, TimelineService>();
-builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IHomeService, HomeService>();
+builder.Services.AddScoped<IFacilityService, FacilityService>();
 
 
 builder.Services.AddCors(options =>

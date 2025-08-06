@@ -4,6 +4,7 @@
     {
         public int Id { get; set; }
         public int BranchId { get; set; }
+        public int? EventId { get; set; } // ✅ New field
         public string Name { get; set; }
         public string? Contact { get; set; }
         public string? Email { get; set; }
