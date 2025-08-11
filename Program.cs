@@ -37,6 +37,7 @@ builder.Services.AddScoped<IVendorService, VendorService>();
 builder.Services.AddScoped<ITimelineService, TimelineService>();
 builder.Services.AddScoped<IHomeService, HomeService>();
 builder.Services.AddScoped<IFacilityService, FacilityService>();
+builder.Services.AddScoped<IRecipeService, RecipeService>();
 
 
 builder.Services.AddCors(options =>

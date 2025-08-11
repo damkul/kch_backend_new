@@ -71,6 +71,7 @@ public partial class KchDbContext : DbContext
     public virtual DbSet<VendorCategory> Vendorcategories { get; set; }
 
     public virtual DbSet<VendorPayment> Vendorpayments { get; set; }
+    public virtual DbSet<RecipeIngredient> RecipeIngredients { get; set; }
 
     public DbSet<EventDetailDto> CurrentMonthEvents { get; set; }
     public DbSet<CountDto> EventCounts { get; set; }
