@@ -7,6 +7,7 @@
         public string FacilityName { get; set; } = string.Empty;
         public int Quantity { get; set; }
         public decimal Rate { get; set; }
-        public decimal Total => Quantity * Rate;
+        public string? Notes { get; set; }
+        public decimal Total => Quantity * Rate; // computed; DO NOT set in code
     }
 }

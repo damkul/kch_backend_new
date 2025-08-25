@@ -40,5 +40,19 @@ namespace kch_backend.API.Controllers
 
             return Ok(bill);
         }
+
+        [HttpGet("getAll")]
+        public async Task<ActionResult<IEnumerable<BillDto>>> GetAllBills(CancellationToken ct)
+        {
+            try
+            {
+                var bills = await _billingService.GetAllBillsAsync(ct);
+                return Ok(bills);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
+        }
     }
 }

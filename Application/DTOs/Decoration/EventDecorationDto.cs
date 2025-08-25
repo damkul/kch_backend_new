@@ -7,7 +7,8 @@
         public string DecorationName { get; set; } = string.Empty;
         public int Quantity { get; set; }
         public decimal Rate { get; set; }
-        public bool IsChargeable { get; set; }
-        public decimal Total => IsChargeable ? Quantity * Rate : 0;
+        public string? Notes { get; set; }
+        public bool? IsChargeable { get; set; }
+        public decimal Total => Quantity * Rate; // computed
     }
 }

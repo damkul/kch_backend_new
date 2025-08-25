@@ -31,7 +31,7 @@ namespace kch_backend.Infrastructure.Services
                         IsDefault = d.IsDefault ?? false
                     }).ToListAsync();
 
-                Log.Information("Fetched {Count} decorations", decorations.Count);
+                Log.Information("Fetched {Count()} decorations", decorations.Count());
                 return decorations;
             }
             catch (Exception ex)
@@ -59,7 +59,7 @@ namespace kch_backend.Infrastructure.Services
                         IsChargeable = ed.IsChargeable ?? false
                     }).ToListAsync();
 
-                Log.Information("Fetched {Count} decorations for event {EventId}", decorations.Count, eventId);
+                Log.Information("Fetched {Count()} decorations for event {EventId}", decorations.Count(), eventId);
                 return decorations;
             }
             catch (Exception ex)
@@ -73,7 +73,7 @@ namespace kch_backend.Infrastructure.Services
         {
             try
             {
-                Log.Information("Assigning {Count} decorations to EventId: {EventId}", decorations.Count, eventId);
+                Log.Information("Assigning {Count()} decorations to EventId: {EventId}", decorations.Count(), eventId);
 
                 var existing = _context.Eventdecorations.Where(e => e.EventId == eventId);
                 _context.Eventdecorations.RemoveRange(existing);

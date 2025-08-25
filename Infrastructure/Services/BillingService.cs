@@ -115,5 +115,40 @@ namespace kch_backend.Infrastructure.Services
                 throw;
             }
         }
+
+        // NEW
+        public async Task<List<BillDto>> GetAllBillsAsync(CancellationToken ct = default)
+        {
+            try
+            {
+                Log.Information("Fetching all bills");
+
+                var list = await _context.bills
+                    .AsNoTracking()
+                    .OrderByDescending(b => b.CreatedOn)
+                    .Select(b => new BillDto
+                    {
+                        Id = b.Id,
+                        EventId = b.EventId,
+                        HallCharge = b.HallCharge ?? 0,
+                        FacilityCharge = b.FacilityCharge ?? 0,
+                        CateringCharge = b.CateringCharge ?? 0,
+                        DecorationCharge = b.DecorationCharge ?? 0,
+                        Tax = b.Tax ?? 0,
+                        Discount = b.Discount ?? 0,
+                        TotalAmount = b.TotalAmount ?? 0,
+                        CreatedOn = b.CreatedOn ?? DateTime.UtcNow
+                    })
+                    .ToListAsync(ct);
+
+                Log.Information("Fetched {Count} bills", list.Count);
+                return list;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, "Error fetching all bills");
+                throw;
+            }
+        }
     }
 }

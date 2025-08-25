@@ -6,5 +6,7 @@ namespace kch_backend.Application.Interfaces
     {
         Task<BillDto> GenerateBillAsync(int eventId);
         Task<BillDto?> GetBillByEventIdAsync(int eventId);
+
+        Task<List<BillDto>> GetAllBillsAsync(CancellationToken ct = default);
     }
 }
